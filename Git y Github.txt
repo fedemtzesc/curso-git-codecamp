@@ -1,0 +1,176 @@
+TRUCOS Y COMANDOS GIT Y GITHUB
+https://youtu.be/mBYSUUnMt9M
+
+Git es  un software para control de versiones mediante un repositorio de archivos.
+Un repositorio es una coleccion de archivos de distintas versiones de un proyecto.
+Un repositorio puede ser local (en tu equipo) o remoto (un servidor web)
+Cuando trabajamos con gut tenermos estas 3 areas de trabajo:
+    1) Area de Trabajo (Working Area)
+    2) Area de Preparacion (Staging Area)
+    3) Repositorio (Repository)
+
+================================================================================
+COMANDOS BASICOS
+================================================================================
+1.  Para inicializar un repositorio:
+    a) Nos cambiamos a la carpeta del proyecto que queremos seguir con Git
+    b) Y tecleamos el siguiente comando: git init
+
+2.  Para revisar el estatus de nuestra area de trabajo tecleamos el siguiente
+    comando:
+    git status
+
+3.  Para revertir los ultimos cambios a un archivo que hayamos modificado
+    usamos el siguiente comando:
+        git restore nombre_archivo_a_restaurar
+
+4.  Para pasar nuestros cambios del Working Area al Staging Area teclemamos el
+    comando:
+    a) git add nombre_del_archivo_que_queremos_pasar
+    b) git add .  #Para pasar todoos los archivos de una sola vez
+
+5.  Para quitar un archivo o archivos del Staging Area usar los siguientes
+    comandos:
+    a)  git rm --cached "nombre_archivo_a_quitar"  (usar -f para forzar)
+    b)  git rm --cached -r .   (para quitar todos)
+
+6.  Para pasar los archivos del Staging Area al Repositorio Principal usamos el
+    comando:
+        a) git commit #Se nos abrira el editor de texto elegido para escribir un
+        mensaje indicando cuales fueron los cambios
+    b) git commit -m "Este seria el mensaje que escribiriamos directamente si no
+        usamos editor"
+    NOTA: Un Commit es como un registro o "foto" del estado de un proyecto en un
+          momento especifico.
+
+7.  Con este comando podemos obtener las diferencias entre la version de nuestro
+    archivo que esta en nuestra Working Area y la version que esta en el nuestro
+    repositorio:
+    a) git diff nombre_archivo_a_revisar
+
+8.  Comandos para configurar mi usuario y mi email a mi configuracion global de
+    git:
+    a) Para establecer el usuario: git config --global user.name "Mi Nomnre Usuario"
+    a) Para establecer el usuario: git config --global user.email "mi@email.com"
+    NOTAS:
+    ------
+     (a) Si solo quiero estas configuraciones para un proyecto en especifico tengo
+          que omitir el parametro --global
+     (b) Puedo tambien agregar parametros personalizados con el nombre que quiera
+        siempre un cuando contenga un puinto enmedio el nombre del parametro
+        Ejemplo: git config --global mi.apodo
+     (c) Para borrar el parametro usamos el ssiguiente comando:
+        git config --global --unset mi.apodo
+     (d) OJO: Si no configuro por lo menos mi user.nbame y user.email no voy a 
+        poder hacer commits.
+
+9. Comandos para ver parametros de la configuracion global o de proyecto de git:
+    a) Para ver un solo parametro:
+        i) A nivel global: git config --global nombre_parametro
+           Ejemplo: git config --global user.name
+        ii) A nivel Proyecto: git config nombre_parametro (desde la carpeta del
+           proyecto)
+    b) Para ver todos los parametros:
+        i) A nivel global: git config --global --list
+        ii) A nivel proyecto: git config --list (desde la carpeta del proyecto)
+
+10.  Comando para cambiar el nombre por default a nuestra rama principal cada vez
+    que creeamos un proyecyo:
+    git config --global init.defaultBranch main   
+    NOTAS: 
+        *** En este caso cambiamos de master a main ***
+        Si queremos ver el cmabio tendriamos que eliminar la carpeta .git de 
+        nuestro proyecto.
+
+11. Comando para asociar VS Code con git:
+    git config --global core.editor "code --wait"
+    y para revertirlo:
+    git config --global core.editor "vi"  (viene por default)
+
+12. Comando para cambiar mensaje de mi ultimo commit en el Repositorio:
+    git commit --amend
+
+13. Comando para visualizar la informacion de los ultimos cambios realizados
+    al proyecto:
+    a) git log              #Para ver la innfo. en version mas detallada
+    b) git log --oneline    #Para ver la la info. en version corta
+    c) git log --oneline --decorate --all --graph #Para verlo con graficos
+    d) git log -    #Muestra como se fue desarrollando el historial de cambios
+
+14. Comando para deshacer el ultimo commit:
+    git reset --soft HEAD~1
+
+================================================================================
+COMANDOS PARA MANEJO DE RAMAS
+================================================================================
+    Una rama (branch) es Git es una línea independiente de desarrollo en el 
+  Repositorio.
+
+1.  Comando para crear una nueva rama:
+    a) git branch nombre-nueva-rama   # solo crea la rama pero no te cambia a esta
+    b) git checkout -b nombre-nueva-rama # crea la rama y te manda a la nueva rama
+    NOTA: *** Siempre hay que colocarse en la rama a partir de la cual queremos
+              crear nuestra nueva rama ***
+
+2.  Comando para ver ramas existentes:
+    git branch
+
+3.  Comando para cambiarse de rama:
+    git checkout nombre-rama-a-ir
+
+4.  Cambiar el nombre de una rama
+    a) Ir a la rama a la cual le quieres cambiar el nombre
+        git checkout rama-a-cambiar
+    b) Y luego escribes el comando para cambiar el nombre de la rama:
+        git branch -m nuevo-nombre
+    c) Otro modo de cambiar el nombre es estando desde la rama main ejecutar:
+        git branch -m rama-a-cambiar nuevo-nombre
+        
+5.  Para eliminar una rama usar el siguiente comando:
+    git branch -d nombre-rama-a-eliminar
+    NOTA: *** NO puedes estar dentro de la rama que estas eliminando ***
+    
+6.  Para fusionar una rama con otra se requiere esta colocado en la rama sobre la
+    rama que recibira la fusión, por lo general es la rama main en la cual
+    nos tenemos que posicionar para fusionar las ramas alternas. Y una vez colocados
+    tecleamos el siguiente comando:
+        git merge nombre-de-la-rama-a-fusionar
+
+7.  Conflictos al fusionar ramas: Esto sucede normalmente cuando dos personas o 
+    programadores trabajaron sobre un mismo archivo y sobre las mismas lineas de
+    código yluego intentan fusionar ambas ramas. Para resolver esto los pasos a 
+    seguir son los siguientes:
+        i)  Posicionarse sobre la rama que se quiere hacer la fusion con la otra
+            rama
+        ii) Ejecutar git merge nombre_rama_a_fusionar
+        iii)Git merge arrojara un mensaje de que existen conflictos en uno o mas
+            archivos y que se tienen que resolver. Para esto, dentro de VSCode 
+            se abrira un archivo o archivos mostrando los conflictos que existen 
+            en cada archivo con conflicto.
+        iv) Se debe hacr click en la herramienta de resolucion de conflictos y 
+            proceder a resolver el conflicto entre ambas versiones del mismo 
+            archivo, de esto, se generara una nueva version del archivo con los 
+            conflictos ya resueltos. Se le indica a la herramienta que ya se 
+            resolvio el conflicto haciendo click en el boton "Conflicto Resuelto"
+        v)  Nospasamos al  GitBash y hacemos git status. Esto nos mostrara el 
+            nuevo archivo creado con la combinacion de las versiones en conflicto
+            ya listo (en verde) para ser enviado al repositiro al que va la fusion.
+        vi) Tecleamos el comando git merge --continue para indicarle a git que
+            ya resolvimos el conflicto para el archivo actual y nos pasamos al 
+            VS Code para teclear el mensaje del commit para este archivo. 
+        vii)Finalmente guardamos y cerramos el archivo de mensaje de commit y 
+            al pasarnos al Git Bash veremos que se realizo exitosamente el
+            commit de nuestro archivo con los conflictos resueltos,
+================================================================================
+GITHUB
+================================================================================
+    ¿Qué es GitHub?
+        Es un serviciode hosting que nos permite almacenar proyectos de 
+        desarrollo de software y control de versiones usano Git.
+
+
+
+
+
+
+
