@@ -212,7 +212,25 @@ GITHUB
             Te permite saber si se han realizado cambios en el repositorio remoto
             desde la ultima vez que actualizaste tu repositorio local con git pull.
 
-    
+    8.  Comando para poder ver los cambios del repositorio remoto:
+        git checkout origin/main
+
+    9.  Bifurcar/Fork (un repositorio) ========>
+        Significa crear una copia del repositorio remoto en tu cuenta de github
+
+    10. Pull Requests                  <=========
+        Es una solicitud de combinar tus cambios con el repositorio orginal del 
+        proyecto al cual estas contribuyendo. 
+        Por ejemplo, tu puedes hacer un archivo nuevo, uina modificacion, o una
+        correccion de un feature en tu copia local que clonaste del Fork y luego
+        solicitar a los administradores un Pull request que te permita aplicar 
+        tus cambios al proyecto original.
+
+        EJEMPLO VISUAL:
+            REPOSITORIO DE OTRO =============FORK==========> TU REPOSITORIO
+            REPOSITORIO DE OTRO <========PULL REQUEST======= TU REPOSITORIO
+            
+
 
 
 
