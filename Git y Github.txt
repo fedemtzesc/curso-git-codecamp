@@ -1,5 +1,8 @@
 TRUCOS Y COMANDOS GIT Y GITHUB
-https://youtu.be/mBYSUUnMt9M
+VIDEO:
+    https://youtu.be/mBYSUUnMt9M
+AQUI VOY: 
+    https://youtu.be/mBYSUUnMt9M?t=15063
 
 Git es  un software para control de versiones mediante un repositorio de archivos.
 Un repositorio es una coleccion de archivos de distintas versiones de un proyecto.
@@ -196,7 +199,20 @@ GITHUB
         fotografía:
         a) git push origin main
 
-    6.  
+    6.  Comando usado para descargar el contenido de un repositorio remoto e 
+        inmediatamente actualizar un repositorio local para que ambos tengan la
+        misma informacion.
+        a) git pull origin main
+    
+    7.  Diferencias entre 'git pull' y 'git fetch'  
+        a)  git pull obtiene los cambios del repositorio remoto e inmediatamente 
+            los aplica y combina con el repositorio local.
+        b)  git fetch solo va a verificar los cambios hechos en el repositorio 
+            remoto sin combinar o aplicar los cambios con el repositorio local.
+            Te permite saber si se han realizado cambios en el repositorio remoto
+            desde la ultima vez que actualizaste tu repositorio local con git pull.
+
+    
 
 
 
