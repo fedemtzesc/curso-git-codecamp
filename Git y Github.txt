@@ -189,11 +189,14 @@ GITHUB
 
     4.  Comando para ver el origen remoto al que tenemos enlazado nuestro proyecto:
         a) git remote
-        b) git remote -va       //Para ver las operaciones que podemos realizar
+        b) git remote -v    //Las operaciones que podemos realizar sobre el origen
     
     5.  Comando usado para enviar cambios realizados en un repositorio local a un 
         repositorio remoto para que ambos tengan la misma informacion o 
-        fotografía.
+        fotografía:
+        a) git push origin main
+
+    6.  
 
 
 
