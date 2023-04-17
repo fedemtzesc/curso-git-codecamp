@@ -168,6 +168,24 @@ GITHUB
         Es un serviciode hosting que nos permite almacenar proyectos de 
         desarrollo de software y control de versiones usano Git.
 
+    Clonar
+        Es crear una copia local de un repositorio remoto, incluyendo sus 
+        versiones e hitorial de commits.
+
+    Origin
+        Nombre que comunmente le asignamos al repositorio remoto que clonamos
+
+    Enlazar un proyecto local con un proyecto remoto en GitHub
+        1. Inicializamos nuestro proyecto local con git init
+        2. Le damos add y commit antes de enlazarlo al remoto 
+        3. Para enlazarlo al remoto tenemos que ejecutar los siguientes comandos.
+            a)  Para enlazarlo git remote add origin url_de_repositorio_remoto
+            b)  Despues jalamos los cambios que puedan estar en el remoto con el 
+                siguiente comando:
+                git pull origin main --allow-unrelated-histories
+            c)  Finalmente enviamos todo el contenido de nuestro local al remoto
+                con el siguiente comando:
+                git push origin main 
 
 
 
