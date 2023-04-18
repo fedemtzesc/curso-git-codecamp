@@ -230,6 +230,20 @@ GITHUB
             REPOSITORIO DE OTRO =============FORK==========> TU REPOSITORIO
             REPOSITORIO DE OTRO <========PULL REQUEST======= TU REPOSITORIO
             
+================================================================================
+CONCEPTOS A ENTENDER
+================================================================================
+
+HEAD
+    El concepto de HEAD es muy simple: se refiere al commit en el que está tu 
+repositorio posicionado en cada momento. Por regla general HEAD suele coincidir
+con el último commit de la rama en la que estés, ya que habitualmente estás 
+trabajando en lo último. Pero si te mueves hacia cualquier otro commit anterior
+ entonces el HEAD estará más atrás.
+
+De hecho, si tienes el repositorio actualizado (te has traído los últimos cambios
+de origin) y estás trabajando en la rama main lo más habitual es que coincidan 
+las tres cosas.
 
 
 
