@@ -7,4 +7,4 @@ y aprendeer la mayor cantidad de operaciones y sus correspondientes comandos.
 De este curso se producira un archivo entregable que sera una guia o resumen de los comandos
 git.
 
-Este es para vr como se mueve el log.
+Para probar el fetch
