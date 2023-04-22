@@ -216,7 +216,15 @@ GITHUB
         git checkout origin/main
 
     9.  Bifurcar/Fork (un repositorio) ========>
-        Significa crear una copia del repositorio remoto en tu cuenta de github
+        Significa crear una copia de otro usuario de github en tu cuenta de github
+        para posteriormente clonarlo en tu repositorio local y poder trabajar con
+        el sin afectar el proyecto original del otro usuario de github.
+
+        Para crear un fork de un proyecto de otro usuario te vas a la cuenta del 
+        otro usuario, buscas el proyecto del cual quieres bifucar y al estar ahí 
+        posicionado haces click en la opcion Fork que se encuentra en la parte 
+        superior derecha de la pantalla, y posteriormente capturas los datos que 
+        te solicita github para crear tu copia del proyeto.
 
     10. Pull Requests                  <=========
         Es una solicitud de combinar tus cambios con el repositorio orginal del 
@@ -245,7 +253,6 @@ De hecho, si tienes el repositorio actualizado (te has traído los últimos camb
 de origin) y estás trabajando en la rama main lo más habitual es que coincidan 
 las tres cosas.
 
-PENDIENTE
 
 
 
