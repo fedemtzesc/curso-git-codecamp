@@ -91,7 +91,7 @@ COMANDOS BASICOS
     git config --global core.editor "vi"  (viene por default)
 
 12. Comando para cambiar mensaje de mi ultimo commit en el Repositorio:
-    git commit --amend
+    git commit --amend -m "Mensaje modificado"
 
 13. Comando para visualizar la informacion de los ultimos cambios realizados
     al proyecto:
