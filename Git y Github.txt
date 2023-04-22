@@ -245,6 +245,7 @@ De hecho, si tienes el repositorio actualizado (te has traído los últimos camb
 de origin) y estás trabajando en la rama main lo más habitual es que coincidan 
 las tres cosas.
 
+PENDIENTE
 
 
 
