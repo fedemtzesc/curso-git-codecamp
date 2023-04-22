@@ -7,4 +7,4 @@ y aprendeer la mayor cantidad de operaciones y sus correspondientes comandos.
 De este curso se producira un archivo entregable que sera una guia o resumen de los comandos
 git.
 
-Para probar el fetch
+Para probar el fetch. Para poder hacerle un pull
