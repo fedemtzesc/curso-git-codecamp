@@ -1,7 +1,5 @@
 TRUCOS Y COMANDOS GIT Y GITHUB
-VIDEO:
-    https://youtu.be/mBYSUUnMt9M
-AQUI VOY: 
+AQUI VOY EN EL VIDEO DEL CURSO: 
     https://youtu.be/mBYSUUnMt9M?t=15063
 
 Git es  un software para control de versiones mediante un repositorio de archivos.
