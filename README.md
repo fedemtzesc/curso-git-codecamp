@@ -8,3 +8,5 @@ De este curso se producira un archivo entregable que sera una guia o resumen de 
 git.
 
 Para probar el fetch. Para poder hacerle un pull
+
+Si me dejo clonar desde MAC
